@@ -89,7 +89,7 @@ function displayGuesses(guess) {
 // 유저에게 띄울 메세지를 입력합니다.
 function displayMessage(message) {
   // 구현 2. 유저에게 메세지를 보여줄 수 있도록 아래의 영역을 구현해주세요
-  $guessingResult.innerHTML = "<h1>" + message + "</h1>";
+  $guessingResult.innerHTML = `<h1>${message}</h1>`;
 }
 
 function endGame() {
@@ -106,20 +106,20 @@ function makeAnswerCircle(guess) {
   const CIRCLE_NAME = "answer";
   // 구현3. 유저가 원의 크기로 정답을 유추하기 쉽도록 showCircle 함수를 이용해서 해당 부분을 구현해주세요,
   // showCircle 함수의 "작업"이 끝나면, 해당 div에 원의 이름을 입력해주세요
-  showCircle(guess, CIRCLE_NAME, $answerCircleArea).then((div) => {
+  document.addEventListener("DOMContentLoaded", async function () {
+    const div = await showCircle(guess, CIRCLE_NAME, $answerCircleArea);
     div.id = "answerCircle";
-    div.append(CIRCLE_NAME);
+    div.innerHTML = CIRCLE_NAME;
   });
 }
 
-function makeGuessCircle(guess) {
-  const CIRCLE_NAME = "guess";
+async function makeGuessCircle(guess) {
+  const CIRCLE_NAME = "guess"
   // 구현3. 유저가 원의 크기로 정답을 유추하기 쉽도록 showCircle 함수를 이용해서 해당 부분을 구현해주세요,
   // showCircle 함수의 "작업"이 끝나면, 해당 div에 원의 이름을 입력해주세요
-  showCircle(guess, CIRCLE_NAME, $guessCircleArea).then((div) => {
-    div.id = "guessCircle";
-    div.append(CIRCLE_NAME);
-  });
+  const div = await showCircle(guess, CIRCLE_NAME, $guessCircleArea);
+  div.id = "guessCircle";
+  div.innerHTML = CIRCLE_NAME;
 }
 
 
@@ -150,6 +150,6 @@ function showCircle(size, circleName, area) {
         div.removeEventListener("transitionend", handler);
         resolve(div);
       });
-    }, 10);
+    }, 0);
   });
 }

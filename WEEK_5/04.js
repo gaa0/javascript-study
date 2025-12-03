@@ -35,7 +35,7 @@ class Rectangle {
         return this._height;
     }
 
-    // height를 위한 getter
+    // height를 위한 setter
     set height(value) {
         if (value <= 0) {
             //
