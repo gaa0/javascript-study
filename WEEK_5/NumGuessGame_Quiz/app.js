@@ -114,7 +114,7 @@ function makeAnswerCircle(guess) {
 }
 
 async function makeGuessCircle(guess) {
-  const CIRCLE_NAME = "guess"
+  const CIRCLE_NAME = "guess";
   // 구현3. 유저가 원의 크기로 정답을 유추하기 쉽도록 showCircle 함수를 이용해서 해당 부분을 구현해주세요,
   // showCircle 함수의 "작업"이 끝나면, 해당 div에 원의 이름을 입력해주세요
   const div = await showCircle(guess, CIRCLE_NAME, $guessCircleArea);
