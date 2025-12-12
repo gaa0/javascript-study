@@ -24,20 +24,20 @@ let number = new Array(5);
 // console.log("2 => ", fruits);
 
 // 3-2. pop
-// let fruits = ["사과", "바나나"];
+let fruits = ["사과", "바나나"];
 // console.log("1 => ", fruits);
 // fruits.pop();
 // console.log("2 => ", fruits);
 
 // 3-3. shift
 
-// console.log("1 => ", fruits);
-// fruits.shift();
-// console.log("2 => ", fruits);
+console.log("1 => ", fruits);
+fruits.shift();
+console.log("2 => ", fruits);
 
 // 3-4. unshift
-// fruits.unshift("포도");
-// console.log(fruits);
+fruits.unshift("포도");
+console.log(fruits);
 
 // 3-5. splice
 // fruits.splice(1, 1, "포도");

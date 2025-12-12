@@ -12,10 +12,10 @@ mySet.add("value3");
 mySet.add("value5");
 mySet.add("value8");
 
-// console.log(mySet.size);
-// console.log(mySet.has("value1"));
-// console.log(mySet.has("value2"));
-// console.log(mySet.has("value3"));
+console.log(mySet.size);
+console.log(mySet.has("value1"));
+console.log(mySet.has("value2"));
+console.log(mySet.has("value3"));
 
 // Iterator, 반복했던 그 친구.
 for (const value of mySet.values()) {
